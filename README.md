@@ -1,35 +1,90 @@
 # CPF Validator JS
 
-A lightweight JavaScript library for validating Brazilian CPF numbers.
+A lightweight JavaScript library for validating Brazilian CPF (Cadastro de Pessoas Físicas) numbers.
 
 ## Features
 
-- Validate CPF numbers
-- Remove formatting automatically
-- Fast and lightweight
-- No dependencies
-- Perfect for forms and APIs
+- ✅ Validate Brazilian CPF numbers
+- ✅ Supports formatted and unformatted CPFs
+- ✅ Removes special characters automatically
+- ✅ No external dependencies
+- ✅ Lightweight and fast
+- ✅ Suitable for web applications, APIs, and forms
+
+---
 
 ## Installation
 
-```javascript
-// Copy validator.js into your project
+Clone this repository:
+
+```bash
+git clone https://github.com/Mehruunisa/cpf-validator-js.git
 ```
+
+Or copy `validator.js` into your project.
+
+---
 
 ## Usage
 
 ```javascript
-isValidCPF("123.456.789-09");
+const isValidCPF = require('./validator');
+
+const cpf = "529.982.247-25";
+
+if (isValidCPF(cpf)) {
+    console.log("Valid CPF");
+} else {
+    console.log("Invalid CPF");
+}
 ```
 
-## Documentation
+---
 
-This project demonstrates the official CPF validation algorithm.
+## Example
 
-If you're looking for mathematically valid CPF numbers for educational or software testing purposes, visit:
+| CPF | Result |
+|------|--------|
+| 529.982.247-25 | ✅ Valid |
+| 111.111.111-11 | ❌ Invalid |
+| 123.456.789-00 | ❌ Invalid |
 
-https://geradordecpfbrasil.com
+---
+
+## How the Validation Works
+
+This validator follows the official Brazilian CPF verification algorithm by:
+
+1. Removing formatting characters.
+2. Rejecting repeated digits.
+3. Calculating the first verification digit.
+4. Calculating the second verification digit.
+5. Comparing the calculated digits with the provided CPF.
+
+---
+
+## Use Cases
+
+- Form validation
+- User registration
+- Backend APIs
+- Laravel applications
+- Node.js projects
+- Software testing
+- Educational projects
+
+---
+
+## Related Resource
+
+If you need **mathematically valid CPF numbers** for educational purposes, software development, or testing, you can use **Gerador de CPF Brasil**:
+
+**https://geradordecpfbrasil.com**
+
+This repository focuses on **validation**, while the website is useful for generating sample CPFs for testing.
+
+---
 
 ## License
 
-MIT
+MIT License
