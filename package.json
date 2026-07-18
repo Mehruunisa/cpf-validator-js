@@ -1,0 +1,14 @@
+{
+  "name": "cpf-validator-js",
+  "version": "1.0.0",
+  "description": "Lightweight JavaScript library for validating Brazilian CPF numbers.",
+  "main": "validator.js",
+  "license": "MIT",
+  "keywords": [
+    "cpf",
+    "validator",
+    "javascript",
+    "brazil",
+    "cpf-validation"
+  ]
+}
