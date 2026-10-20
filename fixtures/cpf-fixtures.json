@@ -1,0 +1,40 @@
+{
+  "description": "Synthetic CPF test fixtures for cpf-validator-js. All numbers are generated test data, produced with the standard CPF check-digit algorithm - they are not real people's CPFs. 'validFormatted' and 'validUnformatted' pass both check digits. 'validLeadingZero' are valid CPFs that begin with 0 and break if the value is handled as a number instead of a string. 'invalidCheckDigit' fail the first or the second check digit. 'invalidRepeatedDigits' satisfy the check-digit math but must be rejected, because repeated-digit sequences are never valid CPFs.",
+  "validFormatted": [
+    "529.982.247-25",
+    "012.345.678-90",
+    "753.707.120-93",
+    "583.136.183-70",
+    "832.002.147-24",
+    "643.715.319-97",
+    "908.373.752-74",
+    "499.210.513-00"
+  ],
+  "validUnformatted": [
+    "52998224725",
+    "01234567890",
+    "75370712093"
+  ],
+  "validLeadingZero": [
+    "012.345.678-90",
+    "016.308.688-50"
+  ],
+  "invalidCheckDigit": [
+    "529.982.247-26",
+    "012.345.678-91",
+    "753.707.120-94",
+    "583.136.183-80"
+  ],
+  "invalidRepeatedDigits": [
+    "000.000.000-00",
+    "111.111.111-11",
+    "222.222.222-22",
+    "333.333.333-33",
+    "444.444.444-44",
+    "555.555.555-55",
+    "666.666.666-66",
+    "777.777.777-77",
+    "888.888.888-88",
+    "999.999.999-99"
+  ]
+}
